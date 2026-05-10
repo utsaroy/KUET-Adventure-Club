@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="KUET Adventure Club — Uniting students who love nature, teamwork, and challenge through trekking, cycling, and exploration.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<title>KUET Adventure Club</title>
 </head>
+
 <body>
 	<header class="hero">
 		<nav class="nav">
 			<div class="nav-container">
-				<img src="images/logo.jpg" alt="KUET Adventure Club logo" class="logo">
+				<a href="#" class="nav-brand">
+					<img src="images/logo.jpg" alt="KUET Adventure Club logo" class="logo">
+					<div class="nav-title">
+						<span class="nav-title-main">KUET Adventure Club</span>
+					</div>
+				</a>
 				<div class="nav-links">
 					<a href="#about">About</a>
 					<a href="#activities">Activities</a>
@@ -21,33 +35,74 @@
 		</nav>
 
 		<div class="hero-content">
-			<h1 class="title">Life is Either a Daring Adventure or Nothing at all.</h1>
-			<h3 class="subtitle">KUET Adventure Club unites students who love nature, teamwork, and challenge. From trekking to social expeditions, we grow resilience, confidence, and lifelong friendships.</h3>
+			<div class="hero-badge">KUET Adventure Club</div>
+			<h1 class="title">Life is Either a Daring Adventure or Nothing at All.</h1>
+			<p class="subtitle">KUET Adventure Club unites students who love nature, teamwork, and challenge. From
+				trekking to social expeditions, we grow resilience, confidence, and lifelong friendships.</p>
+			<div class="hero-actions">
+				<a href="#activities" class="btn btn-primary" id="cta-join">Join the Club →</a>
+				<a href="#about" class="btn btn-outline" id="cta-learn">Learn More</a>
+			</div>
 		</div>
 	</header>
 
 	<section id="about" class="content-section">
 		<div class="container">
 			<h2>Our Mission</h2>
-			<p>Beyond the classroom, we explore the wild. KUET Adventure Club is dedicated to fostering a spirit of exploration among students through mountaineering, cycling, and community service.</p>
+			<p>Beyond the classroom, we explore the wild. KUET Adventure Club is dedicated to fostering a spirit of
+				exploration among students through mountaineering, cycling, and community service.</p>
 		</div>
 	</section>
 
 	<section id="activities" class="cards-section">
 		<div class="container">
-			<h2>What We Do</h2>
+			<h2 data-aos="fade-up">What We Do</h2>
 			<div class="grid">
-				<div class="card">
+				<div class="card" data-aos="fade-up" data-aos-delay="0">
+					<div class="card-icon">
+						<img width="48" height="48" src="https://img.icons8.com/color/48/track-order.png"
+							alt="track-order" />
+					</div>
 					<h3>Trekking</h3>
 					<p>Conquering the highest peaks and densest forests across Bangladesh and beyond.</p>
 				</div>
-				<div class="card">
+				<div class="card" data-aos="fade-up" data-aos-delay="100">
+					<div class="card-icon">
+						<img width="48" height="48" src="https://img.icons8.com/color/48/cycling-road--v1.png"
+							alt="cycling-road--v1" />
+					</div>
 					<h3>Cycling</h3>
 					<p>Long-distance rides to test endurance and explore the scenic beauty of the countryside.</p>
 				</div>
-				<div class="card">
+				<div class="card" data-aos="fade-up" data-aos-delay="200">
+					<div class="card-icon">
+						<img width="64" height="64" src="https://img.icons8.com/dusk/64/social-network.png"
+							alt="social-network" />
+					</div>
 					<h3>Social Work</h3>
 					<p>Giving back to the community through relief work and environmental awareness.</p>
+				</div>
+				<div class="card" data-aos="fade-up" data-aos-delay="300">
+					<div class="card-icon">
+						<img width="48" height="48" src="https://img.icons8.com/emoji/48/camping.png" alt="camping" />
+					</div>
+					<h3>Camping</h3>
+					<p>Overnight expeditions under the stars, building bonds and survival skills in the wild.</p>
+				</div>
+				<div class="card" data-aos="fade-up" data-aos-delay="400">
+					<div class="card-icon">
+						<img width="48" height="48" src="https://img.icons8.com/color/48/float.png" alt="float" />
+					</div>
+					<h3>Survival Skills</h3>
+					<p>Workshops and training sessions to equip members with real-world outdoor skills.</p>
+				</div>
+				<div class="card" data-aos="fade-up" data-aos-delay="500">
+					<div class="card-icon">
+						<img width="48" height="48" src="https://img.icons8.com/3d-fluency/94/compass.png"
+							alt="compass" />
+					</div>
+					<h3>Exploration</h3>
+					<p>Discovering hidden gems, historical sites, and natural wonders across Bangladesh.</p>
 				</div>
 			</div>
 		</div>
@@ -60,6 +115,8 @@
 			<p class="copyright">&copy; 2026 KUET Adventure Club. All rights reserved.</p>
 		</div>
 	</footer>
+	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 	<script src="script.js"></script>
 </body>
+
 </html>
