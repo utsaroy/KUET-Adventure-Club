@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create your KUET Adventure Club membership account.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+  <title>Register — KUET Adventure Club</title>
+</head>
+
+<body class="auth-body">
+  <main class="auth-main">
+    <div class="auth-card auth-card--wide" id="register-card">
+      <div class="auth-header">
+        <h1 class="auth-title">Join the Adventure</h1>
+        <p class="auth-subtitle">Create your member account and start exploring</p>
+      </div>
+
+      <form class="auth-form" id="register-form">
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" id="firstname" name="firstname" class="form-input" placeholder="Your first name"
+              autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" id="lastname" name="lastname" class="form-input" placeholder="Your last name"
+              autocomplete="name" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="reg-dept" class="form-label">Department</label>
+            <div class="input-wrapper input-wrapper--select">
+              <select id="reg-dept" name="department" class="form-input form-select" required>
+                <option value="" disabled selected>Select department</option>
+                <option>Computer Science & Engineering (CSE)</option>
+                <option>Electrical & Electronic Engineering (EEE)</option>
+                <option>Mechanical Engineering (ME)</option>
+                <option>Civil Engineering (CE)</option>
+                <option>Electronics & Communication Engineering (ECE)</option>
+                <option>Industrial Engineering & Management (IEM)</option>
+                <option>Leather Engineering (LE)</option>
+                <option>Textile Engineering (TE)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-batch" class="form-label">Batch Year</label>
+            <input type="number" id="reg-batch" name="batch" class="form-input" placeholder="e.g. 2021" min="2000"
+              max="2030" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email" class="form-label">Email Address</label>
+          <input type="email" id="reg-email" name="email" class="form-input" placeholder="your@kuet.ac.bd"
+            autocomplete="email" required>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="reg-password" class="form-label">Password</label>
+            <input type="password" id="reg-password" name="password" class="form-input" placeholder="Min. 8 characters"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="reg-confirm" class="form-label">Confirm Password</label>
+            <input type="password" id="reg-confirm" name="password_confirmation" class="form-input"
+              placeholder="Repeat password" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="register-btn">
+          <span>Create Account</span>
+        </button>
+
+      </form>
+      <br>
+      <p class="auth-switch">
+        Already a member?
+        <a href="login.html" class="form-link">Sign in</a>
+      </p>
+
+    </div>
+  </main>
+</body>
+
+</html>
