@@ -16,25 +16,7 @@
 </head>
 
 <body>
-  <nav class="nav" style="position: sticky; top: 0; z-index: 100; padding: 10px 20px; background: #0b1c24;">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">
-        <img src="images/logo.jpg" alt="KUET Adventure Club" class="logo">
-        <div class="nav-title">
-          <span class="nav-title-main">KUET Adventure Club</span>
-        </div>
-      </a>
-      <div class="nav-links">
-        <a href="index.html#about">About</a>
-        <a href="index.html#activities">Activities</a>
-        <a href="index.html#events">Events</a>
-        <a href="index.html#gallery">Gallery</a>
-        <a href="index.html#members">Members</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    </div>
-  </nav>
+  <?php $is_event_page = true; include 'components/navbar.php'; ?>
 
   <header class="event-hero">
     <div class="event-hero-bg"></div>
@@ -233,7 +215,7 @@
     <div class="footer-container" style="padding: 32px 0;">
       <div class="footer-bottom" style="border-top: none;">
         <p class="copyright">© 2026 KUET Adventure Club. All rights reserved.</p>
-        <p class="copyright"><a href="index.html" style="color: #4ade80; text-decoration: none;">← Back to Homepage</a>
+        <p class="copyright"><a href="index.php" style="color: #4ade80; text-decoration: none;">← Back to Homepage</a>
         </p>
       </div>
     </div>
