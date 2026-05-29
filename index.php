@@ -24,7 +24,7 @@
 			<p class="subtitle">KUET Adventure Club unites students who love nature, teamwork, and challenge. From
 				trekking to social expeditions, we grow resilience, confidence, and lifelong friendships.</p>
 			<div class="hero-actions">
-				<a href="login.html" class="btn btn-primary" id="cta-join">Join the Club →</a>
+				<a href="login.html" class="btn btn-primary" id="cta-join">Join the Club</a>
 				<a href="#about" class="btn btn-outline" id="cta-learn">Learn More</a>
 			</div>
 		</div>
@@ -39,29 +39,7 @@
 		</div>
 	</section>
 
-	<!--  STATS-->
-	<section id="stats" class="stats-section">
-		<div class="container">
-			<div class="stats-grid">
-				<div class="stat-item" data-aos="fade-up" data-aos-delay="0">
-					<span class="stat-number" data-target="60">60</span><span class="stat-suffix">+</span>
-					<span class="stat-label">Expeditions</span>
-				</div>
-				<div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-					<span class="stat-number" data-target="350">350</span><span class="stat-suffix">+</span>
-					<span class="stat-label">Members</span>
-				</div>
-				<div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-					<span class="stat-number" data-target="12">12</span><span class="stat-suffix">+</span>
-					<span class="stat-label">Years Active</span>
-				</div>
-				<div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-					<span class="stat-number" data-target="20">20</span><span class="stat-suffix">+</span>
-					<span class="stat-label">Destinations</span>
-				</div>
-			</div>
-		</div>
-	</section>
+
 
 	<section id="activities" class="cards-section">
 		<div class="container">
@@ -139,7 +117,7 @@
 						<h3>Sajek Hill Trek 2026</h3>
 						<p>A 3-day trek through the misty ridges of Sajek — one of Bangladesh's most breathtaking
 							highlands.</p>
-						<a href="event.html" class="event-link">View Details →</a>
+						<a href="event.html" class="event-link">View Details</a>
 					</div>
 				</div>
 				<!-- Past -->
@@ -154,7 +132,7 @@
 						</div>
 						<h3>Keokradong Winter Expedition</h3>
 						<p>Summiting Bangladesh's highest peak in the crisp winter air with 24 members of the club.</p>
-						<a href="event.html" class="event-link">View Details →</a>
+						<a href="event.html" class="event-link">View Details</a>
 					</div>
 				</div>
 				<!-- Past -->
@@ -170,7 +148,7 @@
 						<h3>Sundarbans Mangrove Tour</h3>
 						<p>Exploring the world's largest mangrove forest by boat — a rare encounter with nature's wild
 							side.</p>
-						<a href="event.html" class="event-link">View Details →</a>
+						<a href="event.html" class="event-link">View Details</a>
 					</div>
 				</div>
 			</div>

@@ -361,58 +361,7 @@ body {
   line-height: 1.7;
 }
 
-.stats-section {
-  background: linear-gradient(135deg, #0d2318 0%, #0b1c24 100%);
-  border-top: 1px solid rgba(74, 222, 128, 0.1);
-  border-bottom: 1px solid rgba(74, 222, 128, 0.1);
-}
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 48px 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
-  position: relative;
-}
-
-.stat-item:last-child {
-  border-right: none;
-}
-
-.stat-number {
-  display: inline-block;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 800;
-  background: linear-gradient(135deg, #4ade80, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-}
-
-.stat-suffix {
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  font-weight: 800;
-  background: linear-gradient(135deg, #4ade80, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.stat-label {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(180, 200, 210, 0.65);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 
 .events-section {
   background: linear-gradient(180deg, #0f2a1d 0%, #0e2030 100%);

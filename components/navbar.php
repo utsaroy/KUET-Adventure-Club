@@ -8,7 +8,6 @@
         </a>
         <div class="nav-links">
             <a href="index.php#about">About</a>
-            <a href="index.php#stats">Achievements</a>
             <a href="index.php#activities">Activities</a>
             <a href="index.php#events">Events</a>
             <a href="index.php#members">Members</a>

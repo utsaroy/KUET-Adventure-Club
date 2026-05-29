@@ -1,3 +1,37 @@
+<?php
+session_start();
+require 'db_connect.php';
+
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $username = $_POST['username'] ?? '';
+  $password = $_POST['password'] ?? '';
+
+  if (!empty($username) && !empty($password)) {
+    $stmt = $conn->prepare("SELECT id, password_hash FROM admins WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 1) {
+      $admin = $result->fetch_assoc();
+      if (password_verify($password, $admin['password_hash'])) {
+        $_SESSION['admin_id'] = $admin['id'];
+        header("Location: admin_dashboard.php");
+        exit;
+      } else {
+        $error = "Invalid password.";
+      }
+    } else {
+      $error = "Admin username not found.";
+    }
+    $stmt->close();
+  } else {
+    $error = "Please enter both username and password.";
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,10 +57,17 @@
         <p class="auth-subtitle">Sign in to your Adventure Club account</p>
       </div>
 
-      <form class="auth-form" id="login-form">
+      <?php if ($error): ?>
+        <div
+          style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; text-align: center;">
+          <?php echo htmlspecialchars($error); ?>
+        </div>
+      <?php endif; ?>
+
+      <form class="auth-form" id="login-form" method="POST" action="admin_login.php">
         <div class="form-group">
-          <label for="login-email" class="form-label">Email Address</label>
-          <input type="email" id="login-email" name="email" class="form-input" placeholder="your@kuet.ac.bd" required>
+          <label for="login-username" class="form-label">Username</label>
+          <input type="text" id="login-username" name="username" class="form-input" placeholder="admin" required>
         </div>
 
         <div class="form-group">
@@ -49,8 +90,7 @@
       </form>
       <br>
       <p class="auth-switch">
-        Don't have an account?
-        <a href="register.html" class="form-link">Create one →</a>
+        <a href="index.php" class="form-link">Back to Homepage</a>
       </p>
 
     </div>
