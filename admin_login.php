@@ -9,14 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $password = $_POST['password'] ?? '';
 
   if (!empty($username) && !empty($password)) {
-    $stmt = $conn->prepare("SELECT id, password_hash FROM admins WHERE username = ?");
+    $stmt = $conn->prepare("SELECT id, password FROM admins WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows === 1) {
       $admin = $result->fetch_assoc();
-      if (password_verify($password, $admin['password_hash'])) {
+      if ($password === $admin['password']) {
         $_SESSION['admin_id'] = $admin['id'];
         header("Location: admin_dashboard.php");
         exit;
@@ -76,13 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             placeholder="Enter your password" required>
         </div>
 
-        <div class="form-row">
-          <label class="checkbox-label">
-            <input type="checkbox" id="remember-me" class="checkbox-input">
-            <span class="checkbox-custom"></span>
-            Remember me
-          </label>
-        </div>
+
 
         <button type="submit" class="btn btn-primary btn-full" id="login-btn">
           <span>Sign In</span>

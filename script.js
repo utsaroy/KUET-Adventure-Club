@@ -1,10 +1,3 @@
-// Initialize AOS
-AOS.init({
-  duration: 650,
-  easing: 'ease-out-cubic',
-  once: true,
-  offset: 60,
-});
 
 // menu toggle
 function toggleMenu() {
